@@ -720,30 +720,234 @@
   </div>
 </section>
 <section style="display: flex; justify-content: center; align-items: center; margin-top: 3rem; font-family: Arial, sans-serif;">
-  <div style="background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); max-width: 900px; width: 100%; display: flex; align-items: center; gap: 2rem; border: 1px solid #eee;">
+  <div style="padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); max-width: 900px; width: 100%; display: flex; align-items: center; gap: 2rem; border: 1px solid #eee;"
+    class="cta-container styled-box">
 
     <!-- Agent Image -->
     <div style="flex: 0 0 auto; position: relative;">
-      <img src="agent.jpg" alt="AI Agent" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 5px solid #0088ff;">
-      <div style="position: absolute; top: 0; right: 0; background: #0f0f0f; color: #fff; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.9rem;">AI</div>
+      <img src="/images/mobile/ai_assistant.png" alt="AI Agent"
+        style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 5px solid #ff6f00;">
+      <div
+        style="position: absolute; top: 0; right: 0; background: #0f0f0f; color: #fff; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.9rem;">
+        AI</div>
     </div>
 
     <!-- Text + Speak Button -->
     <div style="flex: 1;">
-      <p style="font-size: 1.2rem; line-height: 1.6;" id="dynamicText">
-        <span style="background-color: #1e90ff; color: white; padding: 0.2rem 0.5rem; border-radius: 4px;">Welcome</span>
-        to Synthflow AI — your intelligent assistant. How can I help you today?
+      <p id="dynamicText" style="font-size: 1.2rem; line-height: 1.6;">
+        <span style="background-color: #ff6f00; color: white; padding: 0.2rem 0.5rem; border-radius: 4px;">Welcome</span>
+        <span data-word>to</span> <span data-word>Synthflow</span> <span data-word>AI</span> <span data-word>—</span>
+        <span data-word>your</span> <span data-word>intelligent</span> <span data-word>assistant.</span>
+        <span data-word>How</span> <span data-word>can</span> <span data-word>I</span> <span data-word>help</span>
+        <span data-word>you</span> <span data-word>today?</span>
       </p>
-      
+
+      <!-- Reply Output -->
+      <div id="userResponse" style="margin-top: 1rem; background:rgba(245, 245, 245, 0.23); padding: 1rem; border-radius: 8px; display: none;"></div>
+
       <div style="margin-top: 1rem;">
-        <button onclick="speakText()" style="background-color: #1e90ff; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer;">
-          ▶️ Talk
+        <button onclick="speakText()" style="background-color: #ff6f00; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer;">
+          ▶️ Talk Again
+        </button>
+        <button onclick="startListening()" style="background-color: #333; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer; margin-left: 0.5rem;">
+          🎤 Reply
         </button>
       </div>
     </div>
-
   </div>
 </section>
+
+ <div class="section">
+      <div class="container">
+        <div class="new-features-holder">
+          <div class="w-layout-grid new-features-grid">
+            <div
+              id="w-node-_58d16a15-3ce4-f124-55eb-fc9e0ccd4592-22dcde60"
+              class="feature-grid-content"
+            >
+              <div class="feature-grid-content-holder">
+                <div class="feature-grid-title">
+                  Top Management, to help you see the bigger picture
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Maecenas massa massa id arcu blandit dignissim contum volutpat
+                  dolor fermentum, justo tempor.<br /><br />Vulputate enim ante
+                  egestas commodo in.
+                </p>
+                <a
+                  href="/features"
+                  aria-current="page"
+                  class="button-simple w-inline-block w--current"
+                  ><div>See Doc</div>
+                  <img
+                    src="images/button-20arrow.svg"
+                    loading="lazy"
+                    alt=""
+                    class="button-arrow"
+                /></a>
+              </div>
+              <div class="checked-list-holder">
+                <ul role="list" class="list w-list-unstyled">
+                  <li class="list-item">
+                    <div class="check-icon-holder">
+                      <img
+                        src="images/check-20white.svg"
+                        loading="lazy"
+                        alt=""
+                        class="check-icon"
+                      />
+                    </div>
+                    <div class="check-item-text">
+                      Customizable layouts for efficient coding.
+                    </div>
+                  </li>
+                  <li class="list-item">
+                    <div class="check-icon-holder">
+                      <img
+                        src="images/check-20white.svg"
+                        loading="lazy"
+                        alt=""
+                        class="check-icon"
+                      />
+                    </div>
+                    <div class="check-item-text">
+                      Font preferences to match your style.
+                    </div>
+                  </li>
+                  <li class="list-item">
+                    <div class="check-icon-holder">
+                      <img
+                        src="images/check-20white.svg"
+                        loading="lazy"
+                        alt=""
+                        class="check-icon"
+                      />
+                    </div>
+                    <div class="check-item-text">
+                      Create multiple profiles for versatility.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              id="w-node-_58d16a15-3ce4-f124-55eb-fc9e0ccd45ae-22dcde60"
+              class="feature-grid-image-holder"
+            >
+             <video
+  class="feature-image styled-box"
+  autoplay
+  muted
+  loop
+  playsinline
+  style="width: 100%; height: auto; opacity: 1"
+  sizes="(max-width: 479px) 91vw, (max-width: 767px) 93vw, (max-width: 991px) 94vw, (max-width: 1204px) 95vw, 1144px"
+  data-w-id="58d16a15-3ce4-f124-55eb-fc9e0ccd45af"
+  loading="lazy"
+ 
+>
+  <source src="/images/ai_calling.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+            </div>
+          </div>
+          <div class="w-layout-grid new-features-grid">
+            <div
+              id="w-node-_58d16a15-3ce4-f124-55eb-fc9e0ccd45b1-22dcde60"
+              class="feature-grid-image-holder"
+            >
+              <img
+                class="feature-image styled-box"
+                src="images/mobile/calling.png"
+                alt=""
+                style="opacity: 1"
+                sizes="(max-width: 479px) 91vw, (max-width: 767px) 93vw, (max-width: 991px) 94vw, (max-width: 1439px) 95vw, 1144px"
+                data-w-id="58d16a15-3ce4-f124-55eb-fc9e0ccd45b2"
+                loading="lazy"
+                srcset="
+                  images/mobile/calling.png   500w,
+                  images/mobile/calling.png   800w,
+                  images/mobile/calling.png 1080w,
+                  images/mobile/calling.png        1140w
+                "
+              />
+            </div>
+            <div
+              id="w-node-_58d16a15-3ce4-f124-55eb-fc9e0ccd45b3-22dcde60"
+              class="feature-grid-content"
+            >
+              <div class="feature-grid-content-holder">
+                <div class="feature-grid-title">
+                  Top Management, to help you see the bigger picture
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Maecenas massa massa id arcu blandit dignissim contum volutpat
+                  dolor fermentum, justo tempor.<br /><br />Vulputate enim ante
+                  egestas commodo in.
+                </p>
+                <a
+                  href="/features"
+                  aria-current="page"
+                  class="button-simple w-inline-block w--current"
+                  ><div>See Doc</div>
+                  <img
+                    src="images/button-20arrow.svg"
+                    loading="lazy"
+                    alt=""
+                    class="button-arrow"
+                /></a>
+              </div>
+              <div class="checked-list-holder">
+                <ul role="list" class="list w-list-unstyled">
+                  <li class="list-item">
+                    <div class="check-icon-holder">
+                      <img
+                        src="images/check-20white.svg"
+                        loading="lazy"
+                        alt=""
+                        class="check-icon"
+                      />
+                    </div>
+                    <div class="check-item-text">
+                      Customizable layouts for efficient coding.
+                    </div>
+                  </li>
+                  <li class="list-item">
+                    <div class="check-icon-holder">
+                      <img
+                        src="images/check-20white.svg"
+                        loading="lazy"
+                        alt=""
+                        class="check-icon"
+                      />
+                    </div>
+                    <div class="check-item-text">
+                      Font preferences to match your style.
+                    </div>
+                  </li>
+                  <li class="list-item">
+                    <div class="check-icon-holder">
+                      <img
+                        src="images/check-20white.svg"
+                        loading="lazy"
+                        alt=""
+                        class="check-icon"
+                      />
+                    </div>
+                    <div class="check-item-text">
+                      Create multiple profiles for versatility.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div data-w-id="8ed71055-6ae7-5324-a6d4-54fc76e0e2d9" class="cta-wrapper">
       <div class="container">
@@ -823,6 +1027,8 @@
         </div>
       </div>
     </div>
+
+    
     <div class="section">
       <div class="container">
         <div class="footer-wrapper">
@@ -927,23 +1133,69 @@
     </div>
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/webflow-script.js" type="text/javascript"></script>
-<script>
-  function speakText() {
-    const text = document.getElementById("dynamicText").innerText;
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
-    utterance.rate = 1;
-    utterance.pitch = 1;
-    utterance.volume = 1;
 
-    // Optional: choose a female voice if available
-    const voices = window.speechSynthesis.getVoices();
-    const femaleVoice = voices.find(v => v.name.includes("Female") || v.name.includes("Google UK English Female"));
-    if (femaleVoice) {
-      utterance.voice = femaleVoice;
+<script>
+  const words = Array.from(document.querySelectorAll('[data-word]'));
+  const utterance = new SpeechSynthesisUtterance();
+  const fullText = words.map(w => w.textContent).join(' ');
+  utterance.text = fullText;
+  utterance.rate = 1;
+  utterance.pitch = 1;
+
+  function highlightWord(index) {
+    words.forEach(w => w.style.cssText = "transition: all 0.3s ease;");
+    const wordEl = words[index];
+    if (wordEl) {
+      wordEl.style.backgroundColor = "#ff6f00";
+      wordEl.style.color = "white";
+      wordEl.style.borderRadius = "6px";
+      wordEl.style.boxShadow = "0 0 10px #ff6f00aa";
+    }
+  }
+
+  function speakText() {
+    let index = 0;
+    speechSynthesis.cancel(); // reset
+    utterance.onboundary = function (event) {
+      if (event.name === 'word') {
+        highlightWord(index++);
+      }
+    };
+    utterance.onend = () => {
+      words.forEach(w => w.style.cssText = ""); // reset styles
+    };
+    speechSynthesis.speak(utterance);
+  }
+
+  // Auto speak on load
+  window.onload = () => {
+    speakText();
+  };
+
+  // Start listening for user voice
+  function startListening() {
+    if (!('webkitSpeechRecognition' in window)) {
+      alert("Speech recognition not supported.");
+      return;
     }
 
-    window.speechSynthesis.speak(utterance);
+    const recognition = new webkitSpeechRecognition();
+    recognition.lang = "en-US";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.onresult = function (event) {
+      const transcript = event.results[0][0].transcript;
+      const responseBox = document.getElementById("userResponse");
+      responseBox.textContent = `👤 You: ${transcript}`;
+      responseBox.style.display = "block";
+    };
+
+    recognition.onerror = function (event) {
+      alert("Error: " + event.error);
+    };
+
+    recognition.start();
   }
 </script>
 
